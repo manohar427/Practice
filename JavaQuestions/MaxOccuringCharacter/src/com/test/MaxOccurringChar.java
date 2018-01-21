@@ -5,7 +5,6 @@ import java.util.HashMap;
 public class MaxOccurringChar {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String text = "wfaveqr caafwefwgqrvwerwbhqfvwrfwvbetqfwef q fwgwfw erfq";
 		System.out.println("The max character is : " + findMaxOChar(text));
 	}
