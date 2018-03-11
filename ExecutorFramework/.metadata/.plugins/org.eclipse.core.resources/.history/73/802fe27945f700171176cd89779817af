@@ -1,0 +1,37 @@
+package com.exe;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExecutorFixedPoolDemo {
+
+	public static void main(String[] args) {
+		ExecutorService fes = Executors.newFixedThreadPool(2);
+
+		ThreadF t = new ThreadF();
+		for (int i = 0; i < 20; i++) {
+			fes.execute(t);
+		}
+
+		fes.shutdown();
+		while (!fes.isTerminated()) {
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println(Thread.currentThread().getName() + ":Hi");
+		}
+	}
+}
+
+class ThreadF implements Runnable {
+	public void run() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println(Thread.currentThread().getName() + ":Hi");
+	}
+}

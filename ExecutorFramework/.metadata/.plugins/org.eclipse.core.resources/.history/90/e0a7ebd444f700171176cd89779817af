@@ -1,0 +1,20 @@
+package com.exe;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExecutorFixedPoolDemo {
+
+	public static void main(String[] args) {
+       ExecutorService fes = Executors.newFixedThreadPool(2);
+       
+	}
+
+}
+
+class ThreadF implements Runnable
+{
+	public void run() {
+		
+	}
+}

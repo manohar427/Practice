@@ -1,0 +1,53 @@
+package com.test;
+
+import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class EventAndOddNumberUsingSemaphore {
+
+	public static void main(String[] args) {
+		SharedPrinter sp = new SharedPrinter();
+
+		System.out.println("Date1:" + new Date());
+		ExecutorService executor = Executors.newFixedThreadPool(40);
+		executor.execute(new EvenNumProducer(sp, 10));
+		executor.execute(new OddNumProducer(sp, 10));
+		executor.shutdown();
+
+		System.out.println("Date2:" + new Date());
+	}
+
+}
+
+class EvenNumProducer implements Runnable {
+	SharedPrinter sp;
+	int index;
+
+	EvenNumProducer(SharedPrinter sp, int index) {
+		this.sp = sp;
+		this.index = index;
+	}
+
+	public void run() {
+		for (int i = 2; i <= index; i = i + 2) {
+			sp.printEvenNum(i);
+		}
+	}
+}
+
+class OddNumProducer implements Runnable {
+	SharedPrinter sp;
+	int index;
+
+	OddNumProducer(SharedPrinter sp, int index) {
+		this.sp = sp;
+		this.index = index;
+	}
+
+	public void run() {
+		for (int i = 1; i <= index; i = i + 2) {
+			sp.printOddNum(i);
+		}
+	}
+}

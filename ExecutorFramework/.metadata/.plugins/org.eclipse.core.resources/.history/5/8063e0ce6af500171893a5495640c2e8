@@ -1,0 +1,9 @@
+package com.exe;
+
+public class SemaphoresExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

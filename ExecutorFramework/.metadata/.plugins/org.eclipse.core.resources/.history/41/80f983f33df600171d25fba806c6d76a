@@ -1,0 +1,54 @@
+package com.exe;
+
+import java.util.concurrent.Semaphore;
+
+public class PrintNumber implements Runnable{
+	
+	static volatile int nextStartIdx; 
+
+    private Semaphore waitForSemaphore;
+
+    private Semaphore next;
+
+
+    public PrintNumber(Semaphore waitFor, Semaphore next) {
+        this.waitForSemaphore = waitFor; 
+        this.next = next;
+    }
+
+
+    public void run(){
+        while (true) {
+            print();
+        }
+
+    }
+
+    public void print() {
+        try {
+            waitForSemaphore.acquire();
+            int start = nextStartIdx;
+
+            for(int i=0;i< 5;i++){
+                System.out.println(String.format("%d -- %s", i + start, Thread.currentThread().getName()));
+            }           
+
+            nextStartIdx += 5;
+            next.release();
+
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    public static void main(String[] args){
+
+        Semaphore a = new Semaphore(1);
+        Semaphore b = new Semaphore(0);
+        Thread t1 = new Thread(new PrintNumber(a,b),"t1");
+        Thread t2 = new Thread(new PrintNumber(b,a),"t2");
+        t1.start();
+        t2.start();
+    }
+}
+

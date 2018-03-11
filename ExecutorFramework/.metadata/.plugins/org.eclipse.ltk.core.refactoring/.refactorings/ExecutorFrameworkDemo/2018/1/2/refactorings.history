@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ExecutorFrameworkDemo/src/com/exe/SemaphoresExample1.java&apos; to &apos;PrintNumber.java&apos;" description="Rename resource &apos;SemaphoresExample1.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/exe/SemaphoresExample1.java" name="PrintNumber.java" stamp="1515612415787" updateReferences="true"/>
+</session>

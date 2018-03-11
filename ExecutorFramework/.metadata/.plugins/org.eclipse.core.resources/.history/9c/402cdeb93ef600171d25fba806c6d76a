@@ -1,0 +1,25 @@
+package com.test;
+
+public class EventAndOddNumberUsingSemaphore {
+
+	public static void main(String[] args) {
+		SharedPrinter sp = new SharedPrinter();
+	}
+
+}
+
+class EvenNumProducer implements Runnable {
+	SharedPrinter sp;
+	int index;
+
+	EvenNumProducer(SharedPrinter sp, int index) {
+		this.sp = sp;
+		this.index = index;
+	}
+
+	public void run() {
+		for (int i = 2; i <= index; i = i + 2) {
+			sp.printEvenNum(i);
+		}
+	}
+}

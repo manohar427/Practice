@@ -1,0 +1,50 @@
+package com.test;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class EventAndOddNumberUsingSemaphore {
+
+	public static void main(String[] args) {
+		SharedPrinter sp = new SharedPrinter();
+
+		ExecutorService executor = Executors.newFixedThreadPool(2);
+		executor.execute(new EvenNumProducer(sp, 10));
+		executor.execute(new OddNumProducer(sp, 10));
+		executor.shutdown();
+
+	}
+
+}
+
+class EvenNumProducer implements Runnable {
+	SharedPrinter sp;
+	int index;
+
+	EvenNumProducer(SharedPrinter sp, int index) {
+		this.sp = sp;
+		this.index = index;
+	}
+
+	public void run() {
+		for (int i = 2; i <= index; i = i + 2) {
+			sp.printEvenNum(i);
+		}
+	}
+}
+
+class OddNumProducer implements Runnable {
+	SharedPrinter sp;
+	int index;
+
+	OddNumProducer(SharedPrinter sp, int index) {
+		this.sp = sp;
+		this.index = index;
+	}
+
+	public void run() {
+		for (int i = 1; i <= index; i = i + 2) {
+			sp.printOddNum(i);
+		}
+	}
+}

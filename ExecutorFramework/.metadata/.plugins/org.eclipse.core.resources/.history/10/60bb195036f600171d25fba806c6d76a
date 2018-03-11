@@ -1,0 +1,22 @@
+package com.test;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapSynchronizationDemo {
+	public static void main(String[] args) {
+		Map<String, String> currencies = new HashMap<String, String>();
+
+		currencies.put("USA", "USD");
+		currencies.put("England", "GBP");
+		currencies.put("Canada", "CAD");
+		currencies.put("HongKong", "HKD");
+		currencies.put("Australia", "AUD");
+		
+		currencies = Collections.synchronizedMap(currencies);
+		
+		
+
+	}
+}

@@ -1,0 +1,9 @@
+package com.test;
+
+public class HashMapSynchronizationDemo {
+public static void main(String[] args) {
+	// HashMap with mapping containing country and their currency Map<String, String> currencies = new HashMap<String, String>(); currencies.put("USA", "USD"); currencies.put("England", "GBP"); currencies.put("Canada", "CAD"); currencies.put("HongKong", "HKD"); currencies.put("Australia", "AUD");
+
+	Read more: http://www.java67.com/2015/02/how-to-synchronize-hashmap-in-java-with.html#ixzz53oC38vnC
+}
+}

@@ -1,0 +1,14 @@
+2018-01-09 07:23:55,847 ERROR [Worker-3] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.xtext.ui.internal.Activator).
+2018-01-09 07:23:55,848 ERROR [Worker-3] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-01-09 23:55:30,152 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.xtext.ui.internal.Activator).
+2018-01-09 23:55:30,171 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-01-10 22:49:36,633 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.xtext.ui.internal.Activator).
+2018-01-10 22:49:36,668 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-01-11 06:53:55,292 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.xtext.ui.internal.Activator).
+2018-01-11 06:53:55,332 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-01-12 08:25:15,452 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.xtext.ui.internal.Activator).
+2018-01-12 08:25:15,558 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-01-13 00:02:27,572 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.xtext.ui.internal.Activator).
+2018-01-13 00:02:27,603 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN Please initialize the log4j system properly.
+2018-01-14 09:37:57,573 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.xtext.ui.internal.Activator).
+2018-01-14 09:37:57,603 ERROR [org.eclipse.jdt.internal.ui.text.JavaReconciler] - System.err - log4j:WARN Please initialize the log4j system properly.
